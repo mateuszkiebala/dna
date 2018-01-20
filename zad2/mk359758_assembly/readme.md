@@ -1,7 +1,7 @@
 # Algorytm asemblacji odczytów z sekwencjonowania
 
 ### Uruchamianie
-1. `python assembly.py` `<input.fasta>` `<output.fasta>`
+1. `./assembly` `<input.fasta>` `<output.fasta>`
 
    * `<input.fasta>` - plik zawierający odczyty z sekwencjonowania
    * `<output.fasta>` - plik zawierający utworzone contigi
@@ -19,7 +19,7 @@ wybieramy sąsiada, który ma największą wagę (najwięcej krawędzi w multigr
 Każdy wierzchołek, w zoptymalizowanym grafie, będzie miał stopień wyjściowy
 równy maksymalnie 1.
 
-4. Przechodzimy graf BFS-em dopóki wszystkie wierzchołki nie będą odwiedzone. Pojedyncze wykonanie BFS-a znajduje nam ścieżkę, która staje się contigiem.
+4. Przechodzimy graf uproszczonym BFS-em (zawsze mamy tylko 0 lub 1 następników) dopóki wszystkie wierzchołki nie będą odwiedzone. Pojedyncze wykonanie BFS-a znajduje nam ścieżkę, która staje się contigiem.
 
 5. Eksportujemy znalezione contigi do pliku w formacie fasta.
 
@@ -27,8 +27,8 @@ równy maksymalnie 1.
 1. Przetestowaliśmy różne parametry progu błędu oraz k. Oto najlepsze rezultaty
 jakie udało się nam uzyskać:
 
-| Plik     |   K  | Próg | Rezultat |
+|   Plik   |  K   | Próg | Rezultat |
 |:--------:|:----:|:----:|:--------:|
-| reads1 | 17 | 2  | 0.7547 |
-| reads2 | 17 | 1  | 0.2719 |
-| reads3 | 14 | 1  | 0.1415 |
+|  reads1  |  17  |  2   |  0.7547  |
+|  reads2  |  17  |  1   |  0.2719  |
+|  reads3  |  14  |  1   |  0.1415  |
