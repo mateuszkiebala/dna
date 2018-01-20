@@ -26,7 +26,6 @@ równy maksymalnie 1.
 ### Parametry
 1. Przetestowaliśmy różne parametry progu błędu oraz k. Oto najlepsze rezultaty
 jakie udało się nam uzyskać:
-
 | Plik     |   K  | Próg | Rezultat |
 | -------- | ---- | ---- | -------- |
 |: reads1 :|: 17 :|: 2  :|: 0.7547 :|
